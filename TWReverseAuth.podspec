@@ -7,7 +7,8 @@ Pod::Spec.new do |s|
   s.author       = { "Sean Cook" => "sean.cook@gmail.com" }
   s.source       = { :git => "https://github.com/Tout/TWReverseAuthExample.git", :tag => "#{s.version}" }
   s.platform     = :ios
-  s.source_files = FileList['Source/Classes/**/*.{h,m}'].exclude(/AppDelegate/, /ViewController/)
+  s.source_files = 'Source/Classes/**/*.{h,m}'
+  s.exclude_files = 'Source/Classes/**/*AppDelegate.{h,m}', 'Source/Classes/**/*ViewController.{h,m}'
   s.requires_arc = true
 
   s.frameworks      = 'Accounts', 'Twitter'
